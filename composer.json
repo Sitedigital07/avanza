@@ -1,0 +1,23 @@
+{
+    "name": "digitalsite/avanza",
+    "description": "Modulos control de eventos",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sitedigital",
+            "email": "info@sitedigital.com.co"
+        }
+    ],
+      "autoload": {
+
+        "psr-4": {
+            "Digitalsite\\Avanza\\": "src/"
+        }
+
+    },
+
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "~5"
+    }
+}
