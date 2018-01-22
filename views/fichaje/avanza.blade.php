@@ -78,7 +78,7 @@
     <div role="tabpanel" class="tab-pane" id="profile">
      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 detalle">
       <div class="thumbnail">
-       <iframe src="{{$contenido->ubicacion}}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+       <iframe src="{{$contenido->ubicacion}}" width="100%" height="430px" frameborder="0" style="border:0" allowfullscreen></iframe>
       <div class="caption">
       <h2>{{$contenido->title}}</h2>
        <ul class="list-group">

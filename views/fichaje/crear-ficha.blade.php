@@ -50,21 +50,21 @@ Contactarnos
   <div class="form-group">
     {{Form::label('titulo', 'Nombre de la empresa')}}
    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    {{Form::text('titulo', '', array('class' => 'form-control','placeholder'=>'Ingrese nombre de la empresa'))}}
+    {{Form::text('titulo', '', array('class' => 'form-control','maxlength' => '50','placeholder'=>'Ingrese nombre de la empresa'))}}
    </div>
   </div>
 
   <div class="form-group">
     {{Form::label('descripcion', 'Titulo SEO de la ficha')}}
    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    {{Form::text('descripcion', '', array('class' => 'form-control','placeholder'=>'Ingrese descripción de la empresa'))}}
+    {{Form::text('descripcion', '', array('class' => 'form-control','maxlength' => '60','placeholder'=>'Ingrese descripción de la empresa'))}}
    </div>
   </div>
 
  <div class="form-group">
     {{Form::label('descripseo', 'Descripción SEO de la ficha')}}
    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    {{Form::text('descripseo', '', array('class' => 'form-control','placeholder'=>'Ingrese descripción para el SEO'))}}
+    {{Form::text('descripseo', '', array('class' => 'form-control','maxlength' => '160','placeholder'=>'Ingrese descripción para el SEO'))}}
    </div>
   </div>
  
