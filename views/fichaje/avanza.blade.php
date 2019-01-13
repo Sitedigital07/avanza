@@ -99,7 +99,7 @@
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="top:-25px">
 
      <h3>Ponte en contacto con nosostros</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lectus lectus, tempus in sollicitudin in, gravida dignissim nulla. Aliquam nisi nulla, laoreet sit amet neque id, gravida rhoncus augue.</p>
+     
 <br>
 <form method="POST" action="/mensajes/mensajeficha">
   <div class="form-group">
