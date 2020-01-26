@@ -11,21 +11,21 @@ Route::group(['middleware' => ['auths','administrador']], function (){
 Route::group(['middleware' => ['auths','fichador']], function (){
 
 
-Route::resource('gestion/avanza/mensaje', 'Digitalsite\Avanza\Http\AvanzaController@mensaje');
-Route::resource('gestion/avanza/fichas', 'Digitalsite\Avanza\Http\AvanzaController@avanzaficha');
+Route::get('gestion/avanza/mensaje', 'Digitalsite\Avanza\Http\AvanzaController@mensaje');
+Route::get('gestion/avanza/fichas', 'Digitalsite\Avanza\Http\AvanzaController@avanzaficha');
 
 Route::resource('gestion/avanza/mensaje-ficha', 'Digitalsite\Avanza\Http\AvanzaController@mensajeficha');
-Route::resource('gestion/avanza/crear', 'Digitalsite\Avanza\Http\AvanzaController@avanzacrear');
-Route::resource('gestion/avanza/crearficha', 'Digitalsite\Avanza\Http\AvanzaController@crearficha');
+Route::get('gestion/avanza/crear', 'Digitalsite\Avanza\Http\AvanzaController@avanzacrear');
+Route::post('gestion/avanza/crearficha', 'Digitalsite\Avanza\Http\AvanzaController@crearficha');
 
-Route::resource('gestion/avanza', 'Digitalsite\Avanza\Http\AvanzaController@avanza');
+Route::get('gestion/avanza', 'Digitalsite\Avanza\Http\AvanzaController@avanza');
 
 
-Route::resource('gestion/avanza/editar-ficha', 'Digitalsite\Avanza\Http\AvanzaController@editarficha');
-Route::resource('gestion/avanza/editar-ficha-img', 'Digitalsite\Avanza\Http\AvanzaController@editarfichaimg');
-Route::resource('gestion/avanza/actualizarficha', 'Digitalsite\Avanza\Http\AvanzaController@actualizarficha');
-Route::resource('gestion/avanza/actualizarfichaimg', 'Digitalsite\Avanza\Http\AvanzaController@actualizarfichaimg');
-Route::resource('gestion/avanza/eliminar-ficha', 'Digitalsite\Avanza\Http\AvanzaController@eliminarficha');
+Route::get('gestion/avanza/editar-ficha/{id}', 'Digitalsite\Avanza\Http\AvanzaController@editarficha');
+Route::get('gestion/avanza/editar-ficha-img/{id}', 'Digitalsite\Avanza\Http\AvanzaController@editarfichaimg');
+Route::post('gestion/avanza/actualizarficha/{id}', 'Digitalsite\Avanza\Http\AvanzaController@actualizarficha');
+Route::post('gestion/avanza/actualizarfichaimg/{id}', 'Digitalsite\Avanza\Http\AvanzaController@actualizarfichaimg');
+Route::get('gestion/avanza/eliminar-ficha/{id}', 'Digitalsite\Avanza\Http\AvanzaController@eliminarficha');
 Route::resource('gestion/avanza/leer', 'Digitalsite\Avanza\Http\AvanzaController@leer');
 Route::get('memo/ajax-subcat',function(){
 
@@ -42,13 +42,13 @@ Route::get('memo/ajax-subcat',function(){
 
 Route::group(['middleware' => ['web']], function (){
 
-Route::resource('gestion/avanza/usuario', 'Digitalsite\Pagina\Http\WebController@crearusuario');
+Route::post('gestion/avanza/usuario', 'Digitalsite\Pagina\Http\WebController@crearusuario');
 
 
 Route::get('banner-clic/{id}', function($id){
 
-$url = DB::table('banners')->where('id',$id)->pluck('destino');
-DB::table('banners')->where('id',$id)->limit(1)->update(['clics'=> DB::raw('clics + 1')]);
+$url = DB::table('contents')->where('id',$id)->pluck('url');
+DB::table('contents')->where('id',$id)->limit(1)->update(['content'=> DB::raw('content + 1')]);
  foreach ($url as $url){
 
 return redirect($url);

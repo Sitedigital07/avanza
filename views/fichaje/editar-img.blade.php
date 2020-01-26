@@ -44,7 +44,7 @@
 <div class="container">
  
  @include('avanza::alerts.request')
- {{ Form::open(array('files' => true,'method' => 'PUT','class' => 'form-horizontal','id' => 'defaultForm', 'url' => array('gestion/avanza/actualizarfichaimg',$contenido->id))) }}
+ {{ Form::open(array('files' => true,'method' => 'POST','class' => 'form-horizontal','id' => 'defaultForm', 'url' => array('gestion/avanza/actualizarfichaimg',$contenido->id))) }}
  
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 hidden-xs hidden-sm hidden-md hidden-lg">
   <div class="form-group">

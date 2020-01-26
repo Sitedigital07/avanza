@@ -41,7 +41,7 @@
 <div class="container">
  
  @include('avanza::alerts.request')
- {{ Form::open(array('files' => true,'method' => 'PUT','class' => 'form-horizontal','id' => 'tinyMCEForm', 'url' => array('gestion/avanza/actualizarficha',$contenido->id))) }}
+ {{ Form::open(array('files' => true,'method' => 'POST','class' => 'form-horizontal','id' => 'tinyMCEForm', 'url' => array('gestion/avanza/actualizarficha',$contenido->id))) }}
  
 
   <div class="form-group">
