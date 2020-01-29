@@ -4,6 +4,7 @@
 <!-- Aca se ejecutaran los estilos que contiene el sitio web -->
   <head>
     @foreach($contenida as $contenida)
+     @foreach($plantillaes as $plantillaesa)
    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,8 @@
     <meta name="keywords" content="Sistema de Gestión Empresarial">
     <meta name="author" content="Siteavanza">
     <title>{{$contenida->description}}</title>
-    @include('Template.estilos')
+    @include('Templates.'.$plantillaes->template.'.estilos')
+    @endforeach
    @endforeach
   </head>
 
@@ -25,10 +27,10 @@
 
   @foreach($plantilla as $plantilla)
    
-   @include('Template.logueo')
+    @include('Templates.'.$plantilla->template.'.logueo')
 
   
-  @include('Template.menu')
+  @include('Templates.'.$plantilla->template.'.menu')
 
 
 
@@ -151,13 +153,13 @@
 
 
 <footer>
-@include('Template.footer')
+@include('Templates.'.$plantilla->template.'.footer')
 </footer>
 
 @endforeach
 
 
- @include('Template.scripts')
+ @include('Templates.'.$plantillaes->template.'.scripts')
 
   </body>
 </html >
